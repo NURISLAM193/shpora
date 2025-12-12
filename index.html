@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Шпаргалка по HTML и CSS — 2 курс</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      color: #333;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      border-left: 5px solid #3498db;
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.95em;
+    }
+    pre {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7fb;
+      color: #2c3e50;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #7f8c8d;
+      font-size: 0.9em;
+    }
+    @media print {
+      body {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Шпаргалка по HTML и CSS</h1>
+  <p><strong>Для студентов 2 курса (веб-дизайн)</strong></p>
+
+  <h2>1. Основные HTML-теги</h2>
+  <h3>Семантические теги</h3>
+  <table>
+    <tr>
+      <th>Тег</th>
+      <th>Назначение</th>
+    </tr>
+    <tr>
+      <td><code>&lt;header&gt;</code></td>
+      <td>Шапка сайта или секции</td>
+    </tr>
+    <tr>
+      <td><code>&lt;nav&gt;</code></td>
+      <td>Навигация</td>
+    </tr>
+    <tr>
+      <td><code>&lt;main&gt;</code></td>
+      <td>Основное содержимое</td>
+    </tr>
+    <tr>
+      <td><code>&lt;section&gt;</code></td>
+      <td>Логическая секция</td>
+    </tr>
+    <tr>
+      <td><code>&lt;article&gt;</code></td>
+      <td>Новость, пост</td>
+    </tr>
+    <tr>
+      <td><code>&lt;aside&gt;</code></td>
+      <td>Боковая панель</td>
+    </tr>
+    <tr>
+      <td><code>&lt;footer&gt;</code></td>
+      <td>Подвал сайта</td>
+    </tr>
+  </table>
+
+  <h3>Формы</h3>
+  <pre>
+&lt;form&gt;
+  &lt;label for="name"&gt;Имя:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;input type="submit" value="Отправить"&gt;
+&lt;/form&gt;
+  </pre>
+
+  <h2>2. Основные CSS-свойства</h2>
+  <h3>Box Model</h3>
+  <p>
+    <code>width</code> → <code>padding</code> → <code>border</code> → <code>margin</code>
+  </p>
+  <pre>
+.box {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #000;
+  margin: 20px;
+  box-sizing: border-box; /* Важно! */
+}
+  </pre>
+
+  <h3>Display</h3>
+  <table>
+    <tr>
+      <th>Значение</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td><code>block</code></td>
+      <td>Блочный элемент (новая строка)</td>
+    </tr>
+    <tr>
+      <td><code>inline</code></td>
+      <td>Строчный (внутри текста)</td>
+    </tr>
+    <tr>
+      <td><code>flex</code></td>
+      <td>Гибкий макет</td>
+    </tr>
+    <tr>
+      <td><code>grid</code></td>
+      <td>Сеточная верстка</td>
+    </tr>
+  </table>
+
+  <h3>Flexbox</h3>
+  <pre>
+.container {
+  display: flex;
+  justify-content: center;    /* горизонталь */
+  align-items: center;        /* вертикаль */
+  gap: 10px;
+}
+  </pre>
+
+  <h3>Grid</h3>
+  <pre>
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+  </pre>
+
+  <h3>Позиционирование</h3>
+  <table>
+    <tr>
+      <th><code>position</code></th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td><code>relative</code></td>
+      <td>Относительно своего места</td>
+    </tr>
+    <tr>
+      <td><code>absolute</code></td>
+      <td>Относительно родителя</td>
+    </tr>
+    <tr>
+      <td><code>fixed</code></td>
+      <td>Фиксировано на экране</td>
+    </tr>
+    <tr>
+      <td><code>sticky</code></td>
+      <td>Липкий при скролле</td>
+    </tr>
+  </table>
+
+  <h2>3. 🌈 Дополнительные CSS-примеры</h2>
+
+  <h3>🎨 Изменение цвета фона</h3>
+  <pre>
+/* Цвет фона элемента */
+.header {
+  background-color: #3498db;
+}
+
+/* Градиентный фон */
+.banner {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+/* Фоновое изображение */
+.hero {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* фон "прилипает" при скролле */
+}
+  </pre>
+
+  <h3>📏 Интервалы: между буквами, словами, строками</h3>
+  <pre>
+.text {
+  letter-spacing: 2px;     /* расстояние между буквами */
+  word-spacing: 4px;       /* расстояние между словами */
+  line-height: 1.6;        /* высота строки (межстрочный интервал) */
+}
+  </pre>
+  <p><strong>Пример:</strong></p>
+  <code>letter-spacing: 1px;</code> → "H e l l o"  
+  <code>word-spacing: 10px;</code> → "Один    Два    Три"
+
+  <h3>✨ Тени и скругления</h3>
+  <pre>
+.card {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+  </pre>
+
+  <h3>🔄 Псевдоклассы (например, при наведении)</h3>
+  <pre>
+button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s; /* плавная анимация */
+}
+
+button:hover {
+  background: #2980b9;
+  transform: scale(1.05); /* увеличение при наведении */
+}
+  </pre>
+
+  <h3>📏 Размеры: единицы измерения</h3>
+  <table>
+    <tr>
+      <th>Единица</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td><code>px</code></td>
+      <td>Пиксели (фиксированный размер)</td>
+    </tr>
+    <tr>
+      <td><code>%</code></td>
+      <td>Процент от родителя</td>
+    </tr>
+    <tr>
+      <td><code>em</code></td>
+      <td>Относительно шрифта родителя (1em = текущий размер)</td>
+    </tr>
+    <tr>
+      <td><code>rem</code></td>
+      <td>Относительно корневого (html) шрифта</td>
+    </tr>
+    <tr>
+      <td><code>vh</code>, <code>vw</code></td>
+      <td>1% от высоты/ширины окна</td>
+    </tr>
+  </table>
+
+  <h2>4. Адаптивность (медиа-запросы)</h2>
+  <pre>
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+  </pre>
+
+  <h2>5. Чек-лист знаний</h2>
+  <ul>
+    <li>✅ Семантические теги</li>
+    <li>✅ Flex и Grid</li>
+    <li>✅ Box Model и <code>box-sizing: border-box</code></li>
+    <li>✅ Позиционирование</li>
+    <li>✅ Адаптивная верстка</li>
+    <li>✅ Работа с формами и <code>label</code></li>
+    <li>✅ Управление интервалами (<code>letter-spacing</code>, <code>line-height</code>)</li>
+    <li>✅ Фоны, тени, плавные эффекты</li>
+  </ul>
+
+  <div class="footer">
+    Подготовлено для сессии • Веб-дизайн • 2 курс • Обновлено: 2025
+  </div>
+
+</body>
+</html>

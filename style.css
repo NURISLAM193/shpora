@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main h1{
+    text-align: center;
+}
+main p{
+    text-align: center;
+    border:1px color rgb(89, 167, 245) solid;
+    
+}
